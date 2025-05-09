@@ -6,3 +6,4 @@
 2025-05-09 05:39:43.158461 - Error en orden: APIError(code=-2010): Account has insufficient balance for requested action.
 2025-05-09 06:00:42.808850 - Error general: Saldo insuficiente para realizar la compra mínima.
 2025-05-09 06:07:04.322206 - Error general: Saldo insuficiente para realizar la compra mínima.
+2025-05-09 06:23:02.976306 - Error general: Saldo insuficiente para realizar la compra mínima.
