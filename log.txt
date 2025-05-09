@@ -1,0 +1,5 @@
+2025-05-09 04:31:42.948685 - Error en orden: APIError(code=-2010): Account has insufficient balance for requested action.
+2025-05-09 04:39:58.062946 - Error en orden: APIError(code=-2010): Account has insufficient balance for requested action.
+2025-05-09 04:42:48.383584 - Error en orden: APIError(code=-2010): Account has insufficient balance for requested action.
+2025-05-09 04:48:08.485143 - Error en orden: APIError(code=-2010): Account has insufficient balance for requested action.
+2025-05-09 05:28:31.000266 - Error en orden: APIError(code=-2010): Account has insufficient balance for requested action.
