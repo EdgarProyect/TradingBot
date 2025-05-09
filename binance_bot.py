@@ -1,7 +1,7 @@
 import time
 from binance_api import realizar_orden_compra, realizar_orden_venta
 
-pares = ["BNBUSDT", "USDTBNB"]
+pares = ["BTCUSDT", "BNBUSDT", "USDTBTC", "USDTBNB"]
 cantidad_por_orden = 0.01
 
 def ejecutar_bot(callback_detener):

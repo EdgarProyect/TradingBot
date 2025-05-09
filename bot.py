@@ -2,7 +2,7 @@ import time
 from binance_api import realizar_orden_compra, realizar_orden_venta
 from telegram_report import enviar_reporte_telegram
 
-pares = ["BTCUSDT", "BNBUSDT", "USDTBTC", "USDTBNB"]
+pares = ["BNBUSDT", "USDTBNB"]
 cantidad_por_orden = 0.01
 
 def ejecutar_bot_durante_5_minutos(callback_detener):
