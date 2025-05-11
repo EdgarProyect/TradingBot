@@ -8,3 +8,91 @@
 2025-05-09 06:07:04.322206 - Error general: Saldo insuficiente para realizar la compra mínima.
 2025-05-09 06:23:02.976306 - Error general: Saldo insuficiente para realizar la compra mínima.
 2025-05-09 06:43:01.103736 - Error general: Saldo insuficiente para realizar la compra mínima.
+2025-05-09 06:59:46.653038 - Error general: Saldo insuficiente para realizar la compra mínima.
+2025-05-09 07:24:41.741048 - Error general: Saldo insuficiente para realizar la compra mínima.
+2025-05-09 08:09:36.655881 - Error general: Saldo insuficiente para realizar la compra mínima.
+2025-05-09 08:30:17.966003 - Error general: Saldo insuficiente para realizar la compra mínima.
+2025-05-09 08:41:53.889204 - Error general: Saldo insuficiente para realizar la compra mínima.
+2025-05-10 20:34:08.505346 - Error general: Saldo insuficiente para realizar la compra mínima.
+2025-05-10 21:04:02.185411 - Error general: Saldo insuficiente para realizar la compra mínima.
+2025-05-10 21:13:33.753109 - Error general: Saldo insuficiente para realizar la compra mínima.
+2025-05-10 21:25:18.630306 - Error general: Saldo insuficiente para realizar la compra mínima.
+2025-05-10 22:02:48.564291 - Error general: Saldo insuficiente para realizar la compra mínima.
+2025-05-10 22:31:54.773677 - Verificación API:
+✅ *API conectada correctamente.*
+📊 Tipo de cuenta: SPOT
+💸 Comisiones maker/taker: 10/10
+
+📦 *Saldos relevantes:*
+   - PEPE: 0.00
+   - WIF: 0.00000000
+   - USDT: 0.00000000
+   - FLOKI: 0.00
+   - DOGE: 0.00000000
+   - SHIB: 0.00
+
+2025-05-10 22:37:41.676631 - Error general: Saldo insuficiente para realizar la compra mínima.
+2025-05-10 23:31:21.328639 - Verificación API:
+✅ *API conectada correctamente.*
+📊 Tipo de cuenta: SPOT
+💸 Comisiones maker/taker: 10/10
+
+📦 *Saldos relevantes:*
+   - PEPE: 0.00
+   - WIF: 0.00000000
+   - USDT: 0.00000000
+   - FLOKI: 0.00
+   - DOGE: 0.00000000
+   - SHIB: 0.00
+
+2025-05-10 23:37:41.915998 - Error general: Saldo insuficiente para realizar la compra mínima.
+2025-05-10 23:48:07.531182 - Verificación API:
+✅ *API conectada correctamente.*
+📊 Tipo de cuenta: SPOT
+💸 Comisiones maker/taker: 10/10
+
+📦 *Saldos relevantes:*
+   - PEPE: 0.00
+   - WIF: 0.00000000
+   - USDT: 0.00000000
+   - FLOKI: 0.00
+   - DOGE: 0.00000000
+   - SHIB: 0.00
+
+2025-05-11 03:17:05.349168 - Verificación API:
+✅ *API conectada correctamente.*
+📊 Tipo de cuenta: SPOT
+💸 Comisiones maker/taker: 10/10
+
+📦 *Saldos relevantes:*
+   - PEPE: 226298.60
+   - WIF: 0.00000000
+   - USDT: 0.76375531
+   - FLOKI: 0.00
+   - DOGE: 0.00000000
+   - SHIB: 0.00
+
+2025-05-11 03:22:09.627014 - Error general: Saldo insuficiente para realizar la compra mínima.
+2025-05-11 03:23:47.471681 - Verificación API:
+✅ *API conectada correctamente.*
+📊 Tipo de cuenta: SPOT
+💸 Comisiones maker/taker: 10/10
+
+📦 *Saldos relevantes:*
+   - PEPE: 226298.60
+   - WIF: 0.00000000
+   - USDT: 0.76375531
+   - FLOKI: 0.00
+   - DOGE: 0.00000000
+   - SHIB: 0.00
+
+2025-05-11 03:26:57.732007 - Verificación API:
+✅ *API conectada correctamente.*
+📊 Tipo de cuenta: SPOT
+💸 Comisiones maker/taker: 10/10
+
+📦 *Saldos relevantes:*
+   - PEPE: 226298.60
+   - USDT: 0.76375531
+
+2025-05-11 03:32:19.873961 - Error general: Saldo insuficiente para realizar la compra mínima.

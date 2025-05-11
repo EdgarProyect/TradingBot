@@ -5,8 +5,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-api_key = os.getenv("API_KEY")
-api_secret = os.getenv("API_SECRET")
+api_key = os.getenv("BINANCE_API_KEY")
+api_secret = os.getenv("BINANCE_API_SECRET")
+
+pares = ["DOGEUSDT", "WIFUSDT", "PEPEUSDT", "FLOKIUSDT", "SHIBUSDT"]
 
 def obtener_ip_publica():
     try:
@@ -22,8 +24,17 @@ def probar_conexion_binance(api_key, api_secret):
         client = Client(api_key, api_secret)
         cuenta = client.get_account()
         print("✅ API conectada correctamente. Datos básicos de la cuenta:")
-        print(f"   - ID Cuenta: {cuenta['accountType']}")
+        print(f"   - Tipo de cuenta: {cuenta['accountType']}")
         print(f"   - Comisiones maker/taker: {cuenta['makerCommission']}/{cuenta['takerCommission']}")
+        
+        print("\n📦 Saldos de activos relevantes:")
+        balances = {b['asset']: float(b['free']) for b in cuenta['balances']}
+        tokens_relevantes = set(["USDT"] + [par.replace("USDT", "") for par in pares])
+
+        for token in tokens_relevantes:
+            saldo = balances.get(token, 0.0)
+            print(f"   - {token}: {saldo:.6f}")
+
     except Exception as e:
         print(f"❌ ERROR de conexión a Binance:\n{e}")
         if "Invalid API-key" in str(e) or "code=-2015" in str(e):
