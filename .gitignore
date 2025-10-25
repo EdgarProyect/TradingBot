@@ -1,0 +1,29 @@
+# Archivos de configuración con datos sensibles
+.env
+
+# Archivos de registro
+*.log
+log.txt
+
+# Archivos de caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Entornos virtuales
+venv/
+env/
+ENV/
+
+# Archivos temporales
+*.tmp
+*.bak
+*.swp
+
+# Archivos específicos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos específicos del proyecto
+CLV.txt
+timbaFINANCIERA.txt

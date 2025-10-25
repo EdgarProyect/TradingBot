@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradingYoED - Contacto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contacto - TradingYoED</h1>
+    <p>Completa el formulario para ponerte en contacto con nosotros.</p>
+    
+    <form action="https://formsubmit.co/TU_EMAIL_AQUI" method="POST">
+        <!-- Configuración de FormSubmit -->
+        <input type="hidden" name="_subject" value="Nuevo mensaje de TradingYoED">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://tudominio.com/gracias.html">
+        
+        <div class="form-group">
+            <label for="name">Nombre:</label>
+            <input type="text" name="name" id="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="telegram">Usuario de Telegram:</label>
+            <input type="text" name="telegram" id="telegram">
+        </div>
+        
+        <div class="form-group">
+            <label for="message">Mensaje:</label>
+            <textarea name="message" id="message" rows="5" required></textarea>
+        </div>
+        
+        <button type="submit">Enviar Mensaje</button>
+    </form>
+</body>
+</html>
