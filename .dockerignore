@@ -1,0 +1,17 @@
+# Archivos y carpetas a excluir del contexto de build
+.git/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.db
+*.sqlite
+.env
+venv/
+.vscode/
+.idea/
+Sin título.png
+contacto.html
+contacto1.html
+logs/

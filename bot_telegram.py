@@ -14,6 +14,18 @@ from binance.exceptions import BinanceAPIException
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+# Registrar logs en archivo persistente
+try:
+    log_dir = os.path.join(os.path.dirname(__file__), "logs")
+    os.makedirs(log_dir, exist_ok=True)
+    file_handler = logging.FileHandler(os.path.join(log_dir, "telegram_bot.log"))
+    file_handler.setLevel(logging.INFO)
+    file_handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s %(name)s: %(message)s"))
+    logger.addHandler(file_handler)
+except Exception:
+    # Si no se puede crear el archivo, continuar con logging estándar
+    pass
+
 # Cargar variables del entorno (.env)
 load_dotenv()
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")

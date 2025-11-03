@@ -1,0 +1,93 @@
+services:
+  telegram_bot:
+    build: .
+    image: tradingbot:latest
+    container_name: tradingbot-telegram
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - TZ=Etc/UTC
+    labels:
+      com.centurylinklabs.watchtower.enable: "true"
+    command: ["python", "bot_telegram.py"]
+    volumes:
+      - ./logs:/app/logs
+    healthcheck:
+      test: ["CMD", "python", "healthcheck_telegram.py"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+
+  v_api:
+    image: tradingbot:latest
+    container_name: tradingbot-vapi
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - TZ=Etc/UTC
+    labels:
+      com.centurylinklabs.watchtower.enable: "true"
+    command: ["python", "v_api.py"]
+    volumes:
+      - ./logs:/app/logs
+    healthcheck:
+      test: ["CMD", "python", "healthcheck_binance.py"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+
+  get_chat_id:
+    image: tradingbot:latest
+    container_name: tradingbot-chatid
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - TZ=Etc/UTC
+    labels:
+      com.centurylinklabs.watchtower.enable: "true"
+    command: ["python", "get_chat_id.py"]
+    volumes:
+      - ./logs:/app/logs
+    healthcheck:
+      test: ["CMD", "python", "healthcheck_telegram.py"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    restart: unless-stopped
+    ports:
+      - "8000:8000"    # Edge agent
+      - "9443:9443"    # HTTPS UI
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+    labels:
+      com.centurylinklabs.watchtower.enable: "true"
+
+  watchtower:
+    image: containrrr/watchtower:latest
+    container_name: watchtower
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - WATCHTOWER_CLEANUP=true
+      - WATCHTOWER_LABEL_ENABLE=true
+      - WATCHTOWER_POLL_INTERVAL=300
+      - WATCHTOWER_NOTIFICATION_URLS=telegram://${TELEGRAM_TOKEN}@telegram?chats=${TELEGRAM_CHAT_ID}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    labels:
+      com.centurylinklabs.watchtower.enable: "true"
+
+volumes:
+  portainer_data:
